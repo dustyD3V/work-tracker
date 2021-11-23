@@ -105,6 +105,7 @@ public class TrackerController implements Initializable {
 
     @FXML
     void reset(ActionEvent event) {
+        timerMainRunning = false;
         timelineMain.stop();
         timeMain = LocalTime.parse("00:00:00");
         timerMainLabel.setText(timeMain.format(dtf));
